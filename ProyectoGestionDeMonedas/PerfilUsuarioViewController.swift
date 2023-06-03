@@ -45,7 +45,6 @@ class PerfilUsuarioViewController: UIViewController {
         usuarioM.email = txtEmail.text ?? ""
         usuarioM.password = txtPassword.text ?? ""
         
-        // Update the user data in Core Data
         let contexto = conectar()
         let fetchRequest: NSFetchRequest<Usuario> = Usuario.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "idusuario == %ld", Int16(usuarioM.idusuario!))
