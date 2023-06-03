@@ -29,5 +29,10 @@ class PrincipalViewController: UIViewController {
         }
     }
     
+    @IBAction func btnPerfilUsuario(_ sender: UIButton) {
+        if let perfilVC = storyboard?.instantiateViewController(withIdentifier: "perfil") {
+            present(perfilVC, animated: true, completion: nil)
+        }
+    }
 
 }
