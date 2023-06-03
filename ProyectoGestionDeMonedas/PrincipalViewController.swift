@@ -29,5 +29,11 @@ class PrincipalViewController: UIViewController {
         }
     }
     
-
+    @IBAction func btnMonedas(_ sender: UIButton) {
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let pantalla = storyBoard.instantiateViewController(withIdentifier: "listaMoneda") as! MonedaViewController
+        self.present(pantalla, animated: true, completion: nil)
+    }
+    
 }
