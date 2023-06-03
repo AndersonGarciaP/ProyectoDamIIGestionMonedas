@@ -93,11 +93,11 @@ class MonedaViewController: UIViewController
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let fila = tbMonedas.dequeueReusableCell(withIdentifier: "cell") as!
+        let fila = tbMonedas.dequeueReusableCell(withIdentifier: "Cell") as!
         MonedaTableViewCell
-        fila.tbMoneda.text = "Moneda : " + monedaList[indexPath.row].nomMoneda! + monedaList[indexPath.row].simboMoneda!
+        fila.tbMoneda.text = "Moneda : " + monedaList[indexPath.row].nomMoneda! + " " + monedaList[indexPath.row].simboMoneda!
         fila.tbPais.text = "País : "+monedaList[indexPath.row].paisMoneda!
-        fila.tbCotizacion.text = "Cotización : "+String(monedaList[indexPath.row].cotizaMoneda)
+        fila.tbCotizacion.text = "Cotización : "+String(monedaList[indexPath.row].cotizaMoneda) + "USD"
 
         return fila
     }

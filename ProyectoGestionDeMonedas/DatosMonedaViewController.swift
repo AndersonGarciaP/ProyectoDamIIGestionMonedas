@@ -36,7 +36,7 @@ class DatosMonedaViewController: UIViewController {
         
         moneda!.nomMoneda = tvMoneda.text
         moneda!.paisMoneda = tvPais.text
-        moneda!.simboMoneda = tvMoneda.text
+        moneda!.simboMoneda = tvSimbolo.text
         moneda!.cotizaMoneda = Double(tvCotizacion.text!)!
         let cn = conectar()
         do{

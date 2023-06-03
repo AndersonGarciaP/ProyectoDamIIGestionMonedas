@@ -333,7 +333,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="93" id="XHS-6u-d97" userLabel="Cell" customClass="MonedaTableViewCell" customModule="ProyectoGestionDeMonedas">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="93" id="XHS-6u-d97" userLabel="Cell" customClass="MonedaTableViewCell" customModule="ProyectoGestionDeMonedas" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="414" height="93"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XHS-6u-d97" id="5FL-sh-BED">
@@ -367,6 +367,7 @@
                                             <outlet property="tbCotizacion" destination="qRq-qs-t8y" id="zHB-Dr-lQW"/>
                                             <outlet property="tbMoneda" destination="q0I-p7-iIn" id="rcn-Dc-1bb"/>
                                             <outlet property="tbPais" destination="b8m-rD-zhT" id="0ZD-qz-6sy"/>
+                                            <segue destination="Qja-Fr-ZAT" kind="show" identifier="editar" id="xXl-lZ-dhh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -391,14 +392,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8iA-dD-vgH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2207.2463768115945" y="101.78571428571428"/>
+            <point key="canvasLocation" x="2177" y="102"/>
         </scene>
         <!--Datos Moneda View Controller-->
         <scene sceneID="10m-fV-cp6">
             <objects>
                 <viewController id="Qja-Fr-ZAT" customClass="DatosMonedaViewController" customModule="ProyectoGestionDeMonedas" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aJv-QU-J3k">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Moneda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Dg-Ed-fxr">
