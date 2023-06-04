@@ -246,19 +246,12 @@
                                     <action selector="btnSalir:" destination="8w0-V1-75Y" eventType="touchUpInside" id="0aY-UC-Arw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hola" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="588-ku-oOs">
-                                <rect key="frame" x="20" y="107" width="374" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nZ-bq-oGO">
+                                <rect key="frame" x="0.0" y="159" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nZ-bq-oGO">
-                                <rect key="frame" x="0.0" y="216" width="414" height="80"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Monedas agregadas">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="btnMonedas:" destination="8w0-V1-75Y" eventType="touchUpInside" id="m5A-2m-Ua2"/>
@@ -266,20 +259,13 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="0nZ-bq-oGO" firstAttribute="leading" secondItem="HP6-VW-8YA" secondAttribute="leading" id="cL4-x4-MWf"/>
-                            <constraint firstItem="HP6-VW-8YA" firstAttribute="trailing" secondItem="0nZ-bq-oGO" secondAttribute="trailing" id="qAr-or-zqU"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HP6-VW-8YA"/>
                     </view>
                     <navigationItem key="navigationItem" id="2fl-NA-pkg"/>
-                    <connections>
-                        <outlet property="lblBienvenida" destination="588-ku-oOs" id="84t-QG-H93"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eys-hv-HLj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1459" y="102"/>
+            <point key="canvasLocation" x="1457.9710144927537" y="101.78571428571428"/>
         </scene>
         <!--Moneda View Controller-->
         <scene sceneID="iMq-Hd-YrU">
