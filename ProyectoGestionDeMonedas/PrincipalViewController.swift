@@ -15,10 +15,6 @@ class PrincipalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if let nombreUsuario = nombreUsuario{
-            lblBienvenida.text = "Hola, \(nombreUsuario)!"
-        }
         
     }
     
