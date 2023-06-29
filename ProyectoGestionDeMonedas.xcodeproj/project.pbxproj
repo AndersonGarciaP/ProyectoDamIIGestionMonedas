@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		892B05282A2B7F11008F9ACB /* PerfilUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B05272A2B7F11008F9ACB /* PerfilUsuarioViewController.swift */; };
+		7A20F1722A4D0BE8007897DF /* DescripcionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A20F1712A4D0BE8007897DF /* DescripcionViewController.swift */; };
+		7A20F1742A4D0EBD007897DF /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A20F1732A4D0EBD007897DF /* ConversionViewController.swift */; };
+		7A20F1762A4D1B03007897DF /* DescripcionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A20F1752A4D1B03007897DF /* DescripcionTableViewCell.swift */; };
+		7A20F1782A4D1B27007897DF /* ConversionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A20F1772A4D1B27007897DF /* ConversionTableViewCell.swift */; };
+		7A20F17A2A4D5175007897DF /* DescripcionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A20F1792A4D5175007897DF /* DescripcionResponse.swift */; };
+		7A20F17C2A4D5187007897DF /* CoversionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A20F17B2A4D5187007897DF /* CoversionResponse.swift */; };
 		7AFD1AB82A2ACFA500C8D0DC /* MonedaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFD1AB72A2ACFA500C8D0DC /* MonedaViewController.swift */; };
 		7AFD1ABA2A2ACFFC00C8D0DC /* MonedaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFD1AB92A2ACFFC00C8D0DC /* MonedaModel.swift */; };
 		7AFD1ABC2A2AE90D00C8D0DC /* DatosMonedaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFD1ABB2A2AE90D00C8D0DC /* DatosMonedaViewController.swift */; };
 		7AFD1ABE2A2AE93300C8D0DC /* NuevaMonedaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFD1ABD2A2AE93300C8D0DC /* NuevaMonedaViewController.swift */; };
 		7AFD1AC02A2AE9BA00C8D0DC /* MonedaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AFD1ABF2A2AE9BA00C8D0DC /* MonedaTableViewCell.swift */; };
+		892B05282A2B7F11008F9ACB /* PerfilUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B05272A2B7F11008F9ACB /* PerfilUsuarioViewController.swift */; };
 		89F3FD3E2A2A845A00CB1540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F3FD3D2A2A845A00CB1540 /* AppDelegate.swift */; };
 		89F3FD402A2A845A00CB1540 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F3FD3F2A2A845A00CB1540 /* SceneDelegate.swift */; };
 		89F3FD422A2A845A00CB1540 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F3FD412A2A845A00CB1540 /* ViewController.swift */; };
@@ -46,12 +52,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		892B05272A2B7F11008F9ACB /* PerfilUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilUsuarioViewController.swift; sourceTree = "<group>"; };
+		7A20F1712A4D0BE8007897DF /* DescripcionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescripcionViewController.swift; sourceTree = "<group>"; };
+		7A20F1732A4D0EBD007897DF /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
+		7A20F1752A4D1B03007897DF /* DescripcionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescripcionTableViewCell.swift; sourceTree = "<group>"; };
+		7A20F1772A4D1B27007897DF /* ConversionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionTableViewCell.swift; sourceTree = "<group>"; };
+		7A20F1792A4D5175007897DF /* DescripcionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescripcionResponse.swift; sourceTree = "<group>"; };
+		7A20F17B2A4D5187007897DF /* CoversionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoversionResponse.swift; sourceTree = "<group>"; };
 		7AFD1AB72A2ACFA500C8D0DC /* MonedaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonedaViewController.swift; sourceTree = "<group>"; };
 		7AFD1AB92A2ACFFC00C8D0DC /* MonedaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonedaModel.swift; sourceTree = "<group>"; };
 		7AFD1ABB2A2AE90D00C8D0DC /* DatosMonedaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosMonedaViewController.swift; sourceTree = "<group>"; };
 		7AFD1ABD2A2AE93300C8D0DC /* NuevaMonedaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevaMonedaViewController.swift; sourceTree = "<group>"; };
 		7AFD1ABF2A2AE9BA00C8D0DC /* MonedaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonedaTableViewCell.swift; sourceTree = "<group>"; };
+		892B05272A2B7F11008F9ACB /* PerfilUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilUsuarioViewController.swift; sourceTree = "<group>"; };
 		89F3FD3A2A2A845A00CB1540 /* ProyectoGestionDeMonedas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoGestionDeMonedas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89F3FD3D2A2A845A00CB1540 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89F3FD3F2A2A845A00CB1540 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +151,12 @@
 				7AFD1ABB2A2AE90D00C8D0DC /* DatosMonedaViewController.swift */,
 				7AFD1ABD2A2AE93300C8D0DC /* NuevaMonedaViewController.swift */,
 				7AFD1ABF2A2AE9BA00C8D0DC /* MonedaTableViewCell.swift */,
+				7A20F1712A4D0BE8007897DF /* DescripcionViewController.swift */,
+				7A20F1732A4D0EBD007897DF /* ConversionViewController.swift */,
+				7A20F1752A4D1B03007897DF /* DescripcionTableViewCell.swift */,
+				7A20F1772A4D1B27007897DF /* ConversionTableViewCell.swift */,
+				7A20F1792A4D5175007897DF /* DescripcionResponse.swift */,
+				7A20F17B2A4D5187007897DF /* CoversionResponse.swift */,
 			);
 			path = ProyectoGestionDeMonedas;
 			sourceTree = "<group>";
@@ -293,18 +311,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AFD1ABE2A2AE93300C8D0DC /* NuevaMonedaViewController.swift in Sources */,
+				7A20F1722A4D0BE8007897DF /* DescripcionViewController.swift in Sources */,
 				89F3FD422A2A845A00CB1540 /* ViewController.swift in Sources */,
 				89F3FD712A2A892E00CB1540 /* NuevoUsuarioViewController.swift in Sources */,
 				89F3FD772A2ABB4800CB1540 /* UsuarioManager.swift in Sources */,
+				7A20F17C2A4D5187007897DF /* CoversionResponse.swift in Sources */,
 				892B05282A2B7F11008F9ACB /* PerfilUsuarioViewController.swift in Sources */,
 				7AFD1ABA2A2ACFFC00C8D0DC /* MonedaModel.swift in Sources */,
 				89F3FD3E2A2A845A00CB1540 /* AppDelegate.swift in Sources */,
 				7AFD1AC02A2AE9BA00C8D0DC /* MonedaTableViewCell.swift in Sources */,
+				7A20F1762A4D1B03007897DF /* DescripcionTableViewCell.swift in Sources */,
 				89F3FD402A2A845A00CB1540 /* SceneDelegate.swift in Sources */,
 				89F3FD732A2A8D6A00CB1540 /* UsuarioModel.swift in Sources */,
 				7AFD1ABC2A2AE90D00C8D0DC /* DatosMonedaViewController.swift in Sources */,
 				7AFD1AB82A2ACFA500C8D0DC /* MonedaViewController.swift in Sources */,
+				7A20F17A2A4D5175007897DF /* DescripcionResponse.swift in Sources */,
 				89F3FD752A2A9E9800CB1540 /* PrincipalViewController.swift in Sources */,
+				7A20F1782A4D1B27007897DF /* ConversionTableViewCell.swift in Sources */,
+				7A20F1742A4D0EBD007897DF /* ConversionViewController.swift in Sources */,
 				89F3FD482A2A845A00CB1540 /* ProyectoGestionDeMonedas.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
