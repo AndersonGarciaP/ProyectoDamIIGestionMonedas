@@ -10,8 +10,8 @@ import UIKit
 
 class DescripcionViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
-    var currencies: [Currency] = []
-    var filteredCurrencies: [Currency] = []
+    var simbolos: [Simbolo] = []
+    var filtrarSimbolo: [Simbolo] = []
 
     @IBOutlet weak var txtFiltro: UITextField!
     @IBOutlet weak var tvDescripcion: UITableView!
@@ -21,25 +21,25 @@ class DescripcionViewController: UIViewController,UITableViewDataSource, UITable
         tvDescripcion.dataSource = self
         tvDescripcion.delegate = self
         
-        buscar(criterio: "criterio")
+        buscar(moneda: "moneda")
     }
     
-    func buscar(criterio: String) {
+    func buscar(moneda: String) {
         let urlBase = "https://api.exchangerate.host/symbols"
         let urlConsulta = URL(string: urlBase)
         let request = URLRequest(url: urlConsulta!)
         let tarea = URLSession.shared.dataTask(with: request) { data, response, error in
             if error == nil {
-                if let data = data, let currencyList = try? JSONDecoder().decode(CurrencyList.self, from: data) {
+                if let data = data, let SimboloList = try? JSONDecoder().decode(SimboloList.self, from: data) {
                     
-                    let currencies = currencyList.symbols.values.map { $0 }
+                    let simbolo = SimboloList.symbols.values.map { $0 }
                     
-                    let sortedCurrencies = currencies.sorted { $0.code < $1.code }
+                    let ordenarSimbolo = simbolo.sorted { $0.code < $1.code }
 
                     DispatchQueue.main.async {
                         
-                        self.currencies = sortedCurrencies
-                        self.filteredCurrencies = sortedCurrencies
+                        self.simbolos = ordenarSimbolo
+                        self.filtrarSimbolo = ordenarSimbolo
                         self.tvDescripcion.reloadData()
                     }
                 }
@@ -49,15 +49,15 @@ class DescripcionViewController: UIViewController,UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredCurrencies.count
+        return filtrarSimbolo.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tvDescripcion.dequeueReusableCell(withIdentifier: "desc") as! DescripcionTableViewCell
-        let currency = filteredCurrencies[indexPath.row]
-        cell.lblCode.text = currency.code
-        cell.lblDescripcion.text = currency.description
-        cell.detailTextLabel?.text = currency.code
+        let simbolos = filtrarSimbolo[indexPath.row]
+        cell.lblCode.text = simbolos.code
+        cell.lblDescripcion.text = simbolos.description
+        cell.detailTextLabel?.text = simbolos.code
         return cell
     }
     
@@ -65,16 +65,18 @@ class DescripcionViewController: UIViewController,UITableViewDataSource, UITable
         return 75
     }
     
+    func filtrarSimbolos() {
+        let searchText = txtFiltro.text ?? ""
+
+        if searchText.isEmpty {
+            filtrarSimbolo = simbolos
+        } else {
+            filtrarSimbolo = simbolos.filter { $0.code.contains(searchText) || $0.description.contains(searchText) }
+        }
+    }
 
     @IBAction func btnBuscar(_ sender: UIButton) {
-        let searchText = txtFiltro.text ?? ""
-        
-        if searchText.isEmpty {
-            filteredCurrencies = currencies
-        } else {
-
-            filteredCurrencies = currencies.filter { $0.code.contains(searchText) }
-        }
+        filtrarSimbolos()
         tvDescripcion.reloadData()
     }
     @IBAction func btnVolver(_ sender: UIButton) {
@@ -89,17 +91,14 @@ class DescripcionViewController: UIViewController,UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let currency = filteredCurrencies[indexPath.row]
-        let code = currency.code
-        
+        let simbolos = filtrarSimbolo[indexPath.row]
+        let code = simbolos.code
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let exchangeRateViewController = storyboard.instantiateViewController(withIdentifier: "Conversion") as! ConversionViewController
         
-        
         exchangeRateViewController.base = code
         
-
         present(exchangeRateViewController, animated: true, completion: nil)
     }
     

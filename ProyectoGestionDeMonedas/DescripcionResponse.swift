@@ -9,13 +9,15 @@
 
 import Foundation
 
-struct Currency: Codable {
+
+struct SimboloList: Codable {
+    let symbols: [String: Simbolo]
+}
+
+struct Simbolo: Codable {
     let description: String
     let code: String
 }
 
-struct CurrencyList: Codable {
-    let symbols: [String: Currency]
-}
 
 

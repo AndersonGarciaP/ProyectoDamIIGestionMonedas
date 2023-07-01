@@ -9,9 +9,8 @@
 import UIKit
 
 class ConversionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
     
-    var base: String = ""
+        var base: String = ""
         var amount: Double = 1
         var rates: [(code: String, rate: Double)] = []
 
