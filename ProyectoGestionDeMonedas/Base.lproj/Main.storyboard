@@ -816,7 +816,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jm-12-lyI">
-                                <rect key="frame" x="328" y="71.5" width="54" height="34"/>
+                                <rect key="frame" x="340" y="71.5" width="54" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
@@ -930,7 +930,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Conversion">
                                             <attributes>
-                                                <font key="NSFont" metaFont="system" size="30"/>
+                                                <font key="NSFont" size="28" name=".SFNS-Regular"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>

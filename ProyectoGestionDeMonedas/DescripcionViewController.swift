@@ -66,14 +66,15 @@ class DescripcionViewController: UIViewController,UITableViewDataSource, UITable
     }
     
     func filtrarSimbolos() {
-        let searchText = txtFiltro.text ?? ""
+        let searchText = txtFiltro.text?.lowercased() ?? ""
 
         if searchText.isEmpty {
             filtrarSimbolo = simbolos
         } else {
-            filtrarSimbolo = simbolos.filter { $0.code.contains(searchText) || $0.description.contains(searchText) }
+            filtrarSimbolo = simbolos.filter { $0.code.localizedCaseInsensitiveContains(searchText) || $0.description.localizedCaseInsensitiveContains(searchText) }
         }
     }
+
 
     @IBAction func btnBuscar(_ sender: UIButton) {
         filtrarSimbolos()
@@ -95,11 +96,11 @@ class DescripcionViewController: UIViewController,UITableViewDataSource, UITable
         let code = simbolos.code
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let exchangeRateViewController = storyboard.instantiateViewController(withIdentifier: "Conversion") as! ConversionViewController
+        let pasarCodeController = storyboard.instantiateViewController(withIdentifier: "Conversion") as! ConversionViewController
         
-        exchangeRateViewController.base = code
+        pasarCodeController.code = code
         
-        present(exchangeRateViewController, animated: true, completion: nil)
+        present(pasarCodeController, animated: true, completion: nil)
     }
     
 

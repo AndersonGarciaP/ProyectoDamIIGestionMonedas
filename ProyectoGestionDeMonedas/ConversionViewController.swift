@@ -10,9 +10,9 @@ import UIKit
 
 class ConversionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-        var base: String = ""
+        var code: String = ""
         var amount: Double = 1
-        var rates: [(code: String, rate: Double)] = []
+        var codAndrate: [(code: String, rate: Double)] = []
 
     @IBOutlet weak var lblCode: UILabel!
     @IBOutlet weak var tvConversion: UITableView!
@@ -22,8 +22,7 @@ class ConversionViewController: UIViewController, UITableViewDataSource, UITable
         tvConversion.dataSource = self
         tvConversion.delegate = self
 
-        lblCode.text = base
-        
+        lblCode.text = code
         txtMonto.text = "1"
 
 
@@ -31,20 +30,20 @@ class ConversionViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func ConversionMoneda() {
-        let urlBase = "https://api.exchangerate.host/latest?base=\(base)&amount=\(amount)"
+        let urlBase = "https://api.exchangerate.host/latest?base=\(code)&amount=\(amount)"
         let urlConsulta = URL(string: urlBase)
         let request = URLRequest(url: urlConsulta!)
         let tarea = URLSession.shared.dataTask(with: request) { data, response, error in
             if error == nil {
-                if let data = data, let exchangeRate = try? JSONDecoder().decode(ConversionResponse.self, from: data) {
+                if let data = data, let cambioTasa = try? JSONDecoder().decode(ConversionResponse.self, from: data) {
                     
-                    let rates = exchangeRate.rates.map { (code: $0.key, rate: $0.value) }
+                    let rates = cambioTasa.rates.map { (code: $0.key, rate: $0.value) }
                     
                     let sortedRates = rates.sorted { $0.code < $1.code }
 
                     DispatchQueue.main.async {
                         
-                        self.rates = sortedRates
+                        self.codAndrate = sortedRates
                         self.tvConversion.reloadData()
                     }
                 }
@@ -80,12 +79,12 @@ class ConversionViewController: UIViewController, UITableViewDataSource, UITable
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rates.count
+        return codAndrate.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "conver") as! ConversionTableViewCell
-        let rate = rates[indexPath.row]
+        let rate = codAndrate[indexPath.row]
         cell.lblConversion.text = rate.code
         cell.lblTasa?.text = String(rate.rate)
         return cell
