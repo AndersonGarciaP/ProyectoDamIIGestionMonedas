@@ -930,7 +930,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Conversion">
                                             <attributes>
-                                                <font key="NSFont" size="28" name=".SFNS-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="28"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
